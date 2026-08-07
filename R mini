@@ -1,0 +1,14 @@
+mobile <- readline(prompt = "Enter Mobile Number: ")
+
+plan <- as.numeric(readline(prompt = "Enter Daily Data Plan (GB): "))
+
+used <- as.numeric(readline(prompt = "Enter Monthly Data Used (GB): "))
+
+monthly <- plan * 30
+unused <- monthly - used
+
+cat("\n DATA USAGE REPORT \n")
+cat("Mobile Number :", mobile, "\n")
+cat("Monthly Data  :", monthly, "GB\n")
+cat("Used Data     :", used, "GB\n")
+cat("Unused Data   :", unused, "GB\n")
