@@ -1,0 +1,97 @@
+library(shiny)
+
+ui <- fluidPage(
+
+  tags$style("
+    body {
+      background: linear-gradient(135deg, #dff6ff, #e8ddff);
+      font-family: Arial;
+    }
+
+    .title {
+      text-align: center;
+      color: #4b2e83;
+      font-size: 32px;
+      font-weight: bold;
+      margin: 30px;
+    }
+
+    .box {
+      background: white;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 700px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px #aaa;
+    }
+
+    .btn {
+      background: #6c5ce7;
+      color: white;
+      width: 100%;
+      font-weight: bold;
+    }
+  "),
+
+  div(
+    class = "title",
+    "🌦️ Meteorological Trend Keyword Indexer"
+  ),
+
+  div(
+    class = "box",
+
+    h3("🔎 Search Climate Archives"),
+
+    textInput(
+      "keyword",
+      "Enter Weather Keyword:",
+      placeholder = "cyclone / drought / flood"
+    ),
+
+    actionButton(
+      "search",
+      "Search Archive",
+      class = "btn"
+    ),
+
+    br(),
+    br(),
+
+    tableOutput("result")
+  )
+)
+
+server <- function(input, output) {
+
+  data <- data.frame(
+    Document = c(
+      "Climate Report 2020",
+      "Weather Report 2021",
+      "Climate Archive 2022",
+      "Weather Report 2023"
+    ),
+
+    Line = c(12, 25, 18, 30),
+
+    Text = c(
+      "A severe cyclone crossed the coastal region.",
+      "Heavy rainfall caused flooding.",
+      "A strong drought affected the region.",
+      "Cyclone warning was issued."
+    )
+  )
+
+  output$result <- renderTable({
+
+    req(input$search)
+
+    keyword <- tolower(input$keyword)
+
+    data[
+      grepl(keyword, tolower(data$Text)),
+    ]
+  })
+}
+
+shinyApp(ui, server)
