@@ -1,0 +1,26 @@
+n <- as.integer(readline("Enter how many numbers: "))
+
+even_count <- 0
+odd_count <- 0
+
+cat("\nEnter", n, "numbers:\n")
+
+for (i in 1:n) {
+  
+  num <- as.integer(readline(paste("Enter number", i, ": ")))
+  
+  if (num %% 2 == 0) {
+    
+    even_count <- even_count + 1
+    
+  } else {
+    
+    odd_count <- odd_count + 1
+    
+  }
+}
+
+
+cat("\nNumber of Even numbers =", even_count, "\n")
+
+cat("Number of Odd numbers =", odd_count, "\n")
