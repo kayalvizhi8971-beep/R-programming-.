@@ -1,0 +1,26 @@
+
+
+text <- readline("Enter a string: ")
+
+cat("\nOriginal String:", text, "\n")
+
+# Find length
+cat("Length of string:", nchar(text), "\n")
+
+# Convert to uppercase
+cat("Uppercase:", toupper(text), "\n")
+
+# Convert to lowercase
+cat("Lowercase:", tolower(text), "\n")
+
+# Extract first 5 characters
+cat("First 5 characters:", substr(text, 1, 5), "\n")
+
+# Reverse string
+reverse_text <- paste(rev(strsplit(text, "")[[1]]), collapse = "")
+
+cat("Reverse string:", reverse_text, "\n")
+
+# Replace text
+cat("String after replacing a with @:",
+    gsub("a", "@", text), "\n")
