@@ -1,0 +1,56 @@
+
+
+marks <- c(80, 70, 90, 60, 85, 75, 95)
+
+cat("Dataset:\n")
+
+print(marks)
+
+
+# Mean
+
+mean_value <- mean(marks)
+
+cat("\nMean =", mean_value)
+
+
+# Median
+
+median_value <- median(marks)
+
+cat("\nMedian =", median_value)
+
+
+# Minimum
+
+minimum_value <- min(marks)
+
+cat("\nMinimum =", minimum_value)
+
+
+# Maximum
+
+maximum_value <- max(marks)
+
+cat("\nMaximum =", maximum_value)
+
+
+# Standard Deviation
+
+sd_value <- sd(marks)
+
+cat("\nStandard Deviation =", sd_value)
+
+
+# Variance
+
+variance_value <- var(marks)
+
+cat("\nVariance =", variance_value)
+
+
+# Summary
+
+cat("\n\nStatistical Summary:\n")
+
+print(summary(marks))
