@@ -1,0 +1,28 @@
+# Program 1: Temperature Conversion
+
+cat("TEMPERATURE CONVERSION\n")
+cat("1. Fahrenheit to Celsius\n")
+cat("2. Celsius to Fahrenheit\n")
+
+choice <- as.integer(readline("Enter your choice: "))
+
+if (choice == 1) {
+  
+  fahrenheit <- as.numeric(readline("Enter temperature in Fahrenheit: "))
+  
+  celsius <- (fahrenheit - 32) * 5 / 9
+  
+  cat("Temperature in Celsius =", celsius, "\n")
+  
+} else if (choice == 2) {
+  
+  celsius <- as.numeric(readline("Enter temperature in Celsius: "))
+  
+  fahrenheit <- (celsius * 9 / 5) + 32
+  
+  cat("Temperature in Fahrenheit =", fahrenheit, "\n")
+  
+} else {
+  
+  cat("Invalid choice\n")
+}
