@@ -1,0 +1,48 @@
+# Program 2: Area of Different Shapes
+
+cat("AREA CALCULATION\n")
+cat("1. Rectangle\n")
+cat("2. Square\n")
+cat("3. Circle\n")
+cat("4. Triangle\n")
+
+choice <- as.integer(readline("Enter your choice: "))
+
+if (choice == 1) {
+  
+  length <- as.numeric(readline("Enter length: "))
+  breadth <- as.numeric(readline("Enter breadth: "))
+  
+  area <- length * breadth
+  
+  cat("Area of Rectangle =", area, "\n")
+  
+} else if (choice == 2) {
+  
+  side <- as.numeric(readline("Enter side: "))
+  
+  area <- side * side
+  
+  cat("Area of Square =", area, "\n")
+  
+} else if (choice == 3) {
+  
+  radius <- as.numeric(readline("Enter radius: "))
+  
+  area <- pi * radius * radius
+  
+  cat("Area of Circle =", area, "\n")
+  
+} else if (choice == 4) {
+  
+  base <- as.numeric(readline("Enter base: "))
+  height <- as.numeric(readline("Enter height: "))
+  
+  area <- 0.5 * base * height
+  
+  cat("Area of Triangle =", area, "\n")
+  
+} else {
+  
+  cat("Invalid choice\n")
+}
