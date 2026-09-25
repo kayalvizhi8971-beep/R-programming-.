@@ -1,0 +1,29 @@
+marks <- c(80, 70, 90, 60, 85)
+
+subjects <- c(
+  "Tamil",
+  "English",
+  "Maths",
+  "Science",
+  "Social"
+)
+
+
+# Pie Chart
+
+pie(
+  marks,
+  labels = subjects,
+  main = "Student Marks - Pie Chart"
+)
+
+
+# Bar Chart
+
+barplot(
+  marks,
+  names.arg = subjects,
+  main = "Student Marks - Bar Chart",
+  xlab = "Subjects",
+  ylab = "Marks"
+)
