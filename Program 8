@@ -1,0 +1,24 @@
+# Program 8: Read CSV File
+
+# Read CSV file
+data <- read.csv("student.csv")
+
+# Display complete data
+cat("Student Data:\n")
+
+print(data)
+
+# Display first few records
+cat("\nFirst few records:\n")
+
+print(head(data))
+
+# Display structure
+cat("\nStructure of data:\n")
+
+str(data)
+
+# Display summary
+cat("\nSummary of data:\n")
+
+print(summary(data))
