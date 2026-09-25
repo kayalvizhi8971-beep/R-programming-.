@@ -1,0 +1,48 @@
+
+
+# 1. Vector
+
+cat("VECTOR\n")
+
+vector_data <- c(10, 20, 30, 40, 50)
+
+print(vector_data)
+
+
+# 2. List
+
+cat("\nLIST\n")
+
+list_data <- list(
+  "Kayal",
+  20,
+  TRUE
+)
+
+print(list_data)
+
+
+# 3. Matrix
+
+cat("\nMATRIX\n")
+
+matrix_data <- matrix(
+  1:6,
+  nrow = 2,
+  ncol = 3
+)
+
+print(matrix_data)
+
+
+# 4. Data Frame
+
+cat("\nDATA FRAME\n")
+
+student <- data.frame(
+  Name = c("Arun", "Bala", "Kumar"),
+  Mark = c(80, 90, 75),
+  Age = c(20, 21, 20)
+)
+
+print(student)
